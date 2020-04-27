@@ -89,9 +89,6 @@ class OFFProduct:
         return self._raw["image_front_url"]
     
     def quantity(self):
-        for p in self._raw:
-            if 'quantity' in p:
-                print(p)
         return self._raw["quantity"]
 
 
