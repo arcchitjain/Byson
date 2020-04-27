@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Byson - Import products</title>
+    <link rel="stylesheet" type="text/css" href="{% static "shopmaker/style.css" %}">
+</head>
+<body>
+    <br/><br/><br/>
+    (Leave image empty for prototype)<br/>
+    <img class="small" src="{% static "shopmaker/image_no_annotate.jpeg" %}" /><br/>
+    <form action="{% url "detect-products" %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

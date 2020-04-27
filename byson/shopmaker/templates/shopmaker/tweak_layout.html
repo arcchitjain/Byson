@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "shopmaker/style.css" %}">
+    <style>
+
+        #accent-color  {
+            background-color: rgb(215, 208, 204);
+        }
+        #secondary-accent-color {
+            background-color: rgb(121, 106, 95);
+        }
+        #background-color {
+            background-color: rgb(143, 191, 135);
+        }
+        #text-color {
+            background-color: rgb(60, 52, 45);
+        }
+    </style>
+</head>
+<body>
+<br/><br/><br/>
+<p>
+    {% if image %}
+        <img src="{% static image %}" alt="My image">
+    {% else %}
+        (Leave image empty for prototype)
+        <form action="{% url "tweak-layout" %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
+    {% endif %}
+</p>
+Detected colors:
+    {% if image %}
+        <p>
+            <div id="accent-color" class="palette-color"> </div>
+            <div id="secondary-accent-color" class="palette-color"> </div>
+            <div id="background-color" class="palette-color"> </div>
+            <div id="text-color" class="palette-color"> </div>
+        </p>
+
+        <a href="{% url "preview-layout" %}">Show layout preview</a>
+
+    {% else %}
+        <p>
+            Upload an image of your shop to generate layout coloring.
+        </p>
+    {% endif %}
+
+</body>
+</html>
