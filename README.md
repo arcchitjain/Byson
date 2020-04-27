@@ -16,3 +16,17 @@ Creating personalized theme
 Importing product from image
 
     http://127.0.0.1:8000/shopmaker/import_products
+    
+### Proof of Concepts
+
+Get a list of 4 dominant colors in the store image
+
+    pip install ColorDetect
+    pip install Pillow
+    python get_dominant_colors.py
+
+Read multiple barcodes from an image
+
+    brew install zbar
+    pip install pyzbar
+    python get_barcodes.py
