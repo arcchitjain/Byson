@@ -6,17 +6,17 @@ Local shop owners are being hit hard by the current crisis.  While setting up a 
     pip install -e .
     cd byson
     python manage.py runserver
-    
+
 ### Mockups
 
 Creating personalized theme
     
     http://127.0.0.1:8000/shopmaker/tweak_layout
-    
+
 Importing product from image
 
     http://127.0.0.1:8000/shopmaker/import_products
-    
+
 ### Proof of Concepts
 
 Get a list of 4 dominant colors in the store image
@@ -30,3 +30,14 @@ Read multiple barcodes from an image
     brew install zbar
     pip install pyzbar
     python get_barcodes.py
+
+Build product hierarchy from food products based on barcode.
+
+```python
+pip install requests
+pip install matplotlib
+pip install networkx
+
+python get_products.py
+```
+
