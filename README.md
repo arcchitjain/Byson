@@ -28,19 +28,35 @@ Importing product from image
 
 ### Proof of Concepts
 
+#### Color Detetctor
 Get a list of 4 dominant colors in the store image
+```python
+pip install ColorDetect
+pip install Pillow
 
-    pip install ColorDetect
-    pip install Pillow
-    python get_dominant_colors.py
+python get_dominant_colors.py
+```
 
-Read multiple barcodes from an image
+#### Product Finder - Barcode Detector
+Read multiple barcodes from an image.
 
+##### Installing zbar
+You can check the full instructions [here](https://pypi.org/project/pyzbar/). The zbar DLLs are included with the Windows Python wheels. On other operating systems, you will need to install the zbar shared library.
+
+Linux
+    sudo apt-get install libzbar0
+Mac
     brew install zbar
-    pip install pyzbar
-    python get_barcodes.py
 
-Build product hierarchy from food products based on barcode.
+##### Running Product Finder
+```pythpn
+pip install pyzbar
+
+python get_barcodes.py
+```
+
+#### Category Generator
+Build a product hierarchy from food products based on barcode.
 
 ```python
 pip install requests
