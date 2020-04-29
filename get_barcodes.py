@@ -4,7 +4,7 @@ from pyzbar.pyzbar import decode
 # Source: https://techtutorialsx.com/2020/01/01/python-pyzbar-detecting-and-decoding-barcode/
 
 # image = cv2.imread('Images/techtutorials_barcode.png')
-image = cv2.imread('Images/coke_barcode.jpeg')
+image = cv2.imread('Images/juice_chess_barcode.jpeg')
 
 detectedBarcodes = decode(image)
 

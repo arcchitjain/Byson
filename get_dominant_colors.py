@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw
 def get_colors(infile, outfile=None, swatchsize=40):
     user_image = ColorDetect(infile)
     # get a dictionary return of color count
-    cc = user_image.get_color_count()
+    cc = user_image.get_color_count(color_count=4)
 
     # Save colors to file
 
