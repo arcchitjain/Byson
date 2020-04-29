@@ -44,9 +44,13 @@ Read multiple barcodes from an image.
 You can check the full instructions [here](https://pypi.org/project/pyzbar/). The zbar DLLs are included with the Windows Python wheels. On other operating systems, you will need to install the zbar shared library.
 
 Linux
-    sudo apt-get install libzbar0
+```
+sudo apt-get install libzbar0
+```
 Mac
-    brew install zbar
+```
+brew install zbar
+```
 
 ##### Running Product Finder
 ```pythpn
