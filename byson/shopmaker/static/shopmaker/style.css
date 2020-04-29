@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+body {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-family: "Roboto";
+}
+
+img {
+    height: 250px;
+}
+
+.palette-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+        /*<div id="layout-box">*/
+        /*    <div class="column">*/
+        /*        <div class="header">*/
+        /*            <img src="{% static image %}" class="banner" />*/
+        /*        </div>*/
+        /*        <div class="content">*/
+        /*            <div class="navigation">*/
+        /*            </div>*/
+        /*            <div class="products">*/
+        /*            </div>*/
+        /*        </div>*/
+        /*    </div>*/
+        /*</div>*/
+
+#layout-box {
+    position: absolute;
+    margin-left: -300px;
+    left: 50%;
+    margin-top: -250px;
+    top: 50%;
+    width: 600px;
+    height: 500px;
+}
+
+#layout-box .column {
+    position: absolute;
+    /*left: 50%;*/
+    /*width: 800px;*/
+    width: 100%;
+    height: 300px;
+    /*margin-left: -400px;*/
+}
+
+#layout-box .header {
+    width: 100%;
+    height: 200px;
+}
+
+#layout-box .search {
+    padding: 10px;
+    width: 300px;
+    margin: auto;
+}
+
+input {
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 2px;
+    border: none;
+}
+
+input[type=text] {
+}
+
+input[type=submit] {
+        padding: 7px;
+
+    background-color: #8b450f;
+    color: white;
+}
+
+
+#layout-box .search input[type=text] {
+    height: 20px;
+    width: 200px;
+    border-radius: 2px;
+    border: 1px solid rgb(60, 52, 45);
+    background-color: rgba(215, 208, 204, 0.8);
+    color: rgb(60, 52, 45);
+}
+
+#layout-box .search input[type=submit] {
+    border-radius: 2px;
+    border: 1px solid rgb(60, 52, 45);
+    background-color: rgb(121, 106, 95);
+    color: rgb(215, 208, 204);
+}
+
+#layout-box .content {
+    width: 100%;
+}
+
+#layout-box .navigation {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+#layout-box .navigation p {
+    margin-left: 10px;
+}
+
+#layout-box .products {
+    position: absolute;
+    left: 150px;
+}
+
+.box {
+    display: inline-block;
+    margin: 10px;
+}
+
+.box span {
+    display: inline-block;
+    width: 200px;
+    color: rgb(150, 150, 150);
+}
+
+.small {
+    height: 100px; !important;
+}
+
+#form, #form2 {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -0px;
+    border: 3px solid #43aaff;
+    border-radius: 2px;
+    background-color: white;
+}
+
+#form input[type=text], #form2 input[type=text] {
+    border: 1px solid black;
+}
+
+#form2 {
+    border-color: #50ff00;
+    top: 110px;
+    margin-left: -220px;
+}
+
+textarea {
+    border: 1px solid black;
+    border-radius: 2px;
+}

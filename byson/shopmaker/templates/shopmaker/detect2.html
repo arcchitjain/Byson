@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Byson - Import products</title>
+    <link rel="stylesheet" type="text/css" href="{% static "shopmaker/style.css" %}">
+</head>
+<body>
+    <br/><br/><br/>
+    2 products detected<br>
+    <img src="{% static "shopmaker/image_annotated.jpg" %}" />
+
+    <div id="form2">
+        Product image<br>
+        <div class="product-image" style="
+            background-image: url({% static "shopmaker/chess.jpeg" %});
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                ">
+
+        </div><br>
+        <input type="text" value="Product name" /><br>
+        <input type="text" value="Price €" /><br>
+        <textarea>
+            Product description
+        </textarea><br>
+        <form action="{% url "import-products" %}">
+        <input type="submit" value="Skip" />
+        <input type="submit" value="Save & finish" />
+            </form>
+    </div>
+</body>
+</html>

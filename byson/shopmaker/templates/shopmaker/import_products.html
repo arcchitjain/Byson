@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Byson - Import products</title>
+    <link rel="stylesheet" type="text/css" href="{% static "shopmaker/style.css" %}">
+</head>
+<body>
+<br/><br/><br/>
+    <h2>How would you like to add products to your catalogue?</h2>
+    <div class="box">
+        <form action="{% url "image-import" %}">
+            <input type="submit" value="Via image">
+        </form>
+        <br/>
+        <span>Upload a picture of products you want to sell online
+</span>
+        </div>
+    <div class="box">
+              <form action="{% url "image-import" %}">
+      <input type="submit" value="Via Excel sheet">
+          </form>
+        <br/>
+      <span>Upload your existing Excel sheet with an overview of your products
+</span>
+         </div>
+   <div class="box">
+                   <form action="{% url "image-import" %}">
+ <input type="submit" value="Manually">
+            </form>
+       <br/>
+   <span>Enter product information manually<br>(text)
+</span>
+        </div>
+
+</body>
+</html>

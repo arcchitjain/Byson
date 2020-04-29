@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "shopmaker/style.css" %}">
+    <style>
+        #accent-color  {
+            background-color: rgb(215, 208, 204);
+        }
+        #secondary-accent-color {
+            background-color: rgb(121, 106, 95);
+        }
+        #background-color {
+            background-color: rgb(143, 191, 135);
+        }
+        #text-color {
+            background-color: rgb(60, 52, 45);
+        }
+
+            #layout-box .header {
+                background-image: url("{% static image %}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                border-bottom: 2px solid rgb(60, 52, 45);
+            }
+
+            #layout-box .column {
+                background-color: rgb(143, 191, 135);
+                color: rgb(60, 52, 45);
+            }
+
+            #layout-box .navigation {
+                background-color: rgb(215, 208, 204);
+                border-right: 2px solid rgb(60, 52, 45) /*rgb(143, 191, 135);*/
+            }
+
+    </style>
+</head>
+<body>
+        <p>
+            <div id="accent-color" class="palette-color"> </div>
+            <div id="secondary-accent-color" class="palette-color"> </div>
+            <div id="background-color" class="palette-color"> </div>
+            <div id="text-color" class="palette-color"> </div>
+        </p>
+
+        <div id="layout-box">
+                <div class="header">
+                    <div class="search">
+                        <input type="text" />
+                        <input type="submit" value="Search" />
+                    </div>
+                </div>
+            <div class="column">
+                <div class="content">
+                    <div class="navigation">
+                        <p>Category 1</p>
+                        <p>Category 2</p>
+                        <p>Category 3</p>
+                    </div>
+                    <div class="products">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
